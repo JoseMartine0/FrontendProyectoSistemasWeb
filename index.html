@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Inventario - Instrumentos Musicales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <h1>Leones Marching Band</h1>
+      <p>Gestión de Inventario de Instrumentos Musicales</p>
+    </div>
+  </header>
+  <main>
+    <section class="table-section">
+      <h2>Instrumentos Disponibles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="instrumento-list"></tbody>
+      </table>
+    </section>
+
+    <section class="form-section">
+      <h2>Agregar/Actualizar Instrumento</h2>
+      <form id="instrument-form">
+        <input type="hidden" id="instrumento-id">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" placeholder="Nombre del instrumento" required>
+        </div>
+        <div class="form-group">
+          <label for="categoria">Categoría:</label>
+          <input type="text" id="categoria" placeholder="Categoría (ej. Metales, Maderas)" required>
+        </div>
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" placeholder="Cantidad" required>
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <input type="text" id="estado" placeholder="Estado (Disponible/No Disponible)" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <input type="text" id="descripcion" placeholder="Descripción del instrumento" required>
+        </div>
+        <button type="button" onclick="saveInstrumento()">Guardar</button>
+        <button type="button" onclick="resetForm()">Limpiar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Leones Marching Band. Todos los derechos reservados.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
